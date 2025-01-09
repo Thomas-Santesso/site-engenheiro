@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <h1>Vinicius de M. Oliveira Engenharia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre"><i class="fas fa-user"></i> Especialidades</a></li>
+                    <li><a href="#projetos"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                    <li><a href="#areasdeatuação"><i class="fas fa-tools"></i> Áreas de Atuação</a></li>
+                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="image">
+        <div class="content">
+            <img src="banner.png" alt="Banner" class="banner-image">
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="content">
+            <h2>Especialidades</h2>
+            <p>Trabalhamos com:</p>
+            <ul>
+                <li>Análise e Elaboração de plano de rigging</li>
+                <li>Laudo Técnico para guindaste, caminhão Munck, empilhadeiras, entre outros</li>
+                <li>Recolhimento de ART</li>
+                <li>Vistoria técnica</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="content">
+            <h2>Projetos</h2>
+            <div class="projeto">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
+                <img src="projeto1.jpg" alt="Projeto 1">
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+                <img src="projeto2.jpg" alt="Projeto 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="areasdeatuação">
+        <div class="content">
+            <h2>Áreas de Atuação</h2>
+            <ul>
+                <li>Setores Industriais e de construção</li>
+                <li>Construção Civil</li>
+                <li>Estaleiros</li>
+                <li>Portos</li>
+                <li>Mineração</li>
+                <li>Indústrias de petróleo e gás</li>
+                <li>Setor de entretenimento</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="content">
+            <h2>Contato</h2>
+            <p>Entre em contato pelo WhatsApp clicando no botão abaixo:</p>
+            <a href="https://w.app/EInoi6" target="_blank" class="button whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Enviar mensagem no WhatsApp
+            </a>
+            <p>Ou pelo email: <strong>vinicius.oliver8@gmail.com</strong></p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate");
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
