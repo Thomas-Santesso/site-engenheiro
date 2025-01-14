@@ -217,7 +217,7 @@ section.animate {
     }
 
     .banner-container {
-        height: 70vh; /* Mantém o banner com 100% da altura da tela */
+        height: 50vh; /* Mantém o banner com 100% da altura da tela */
     }
 
     .banner-overlay h1 {
@@ -260,7 +260,7 @@ section.animate {
     }
 
     .banner-container {
-        height: 50vh; /* Continua ocupando 100% da altura da tela */
+        height: 40vh; /* Continua ocupando 100% da altura da tela */
     }
 
     .banner-overlay h1 {
